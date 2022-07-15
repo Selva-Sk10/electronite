@@ -1,0 +1,38 @@
+*,
+*::before,
+*::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+:root{
+  --clr-primary: #15161d;
+  --clr-secondary: #d10024;
+  --clr-grey: #b9babc;
+  --clr-white: #ffffff;
+  --clr-blue: #1e1f29;
+
+  --trans-all: all;
+  --trans-duration: 300ms;
+
+  --box-shadow: 0 3px 7px 0 rgba(0,0,0,20%);
+  --br-radius: 5px;
+}
+
+body{
+  font-family: 'Open Sans', sans-serif;
+}
+
+a{
+  text-decoration: none;
+}
+
+ul{
+  list-style-type: none;
+}
+
+p{
+  line-height: 1.7;
+}

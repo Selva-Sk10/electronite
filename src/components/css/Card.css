@@ -1,0 +1,102 @@
+.card{
+    /* border: 1px solid var(--clr-grey); */
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    border-radius: var(--br-radius);
+    width: 300px;
+    padding: 1em;
+    box-shadow: var(--box-shadow);
+}
+
+.card+.card{
+    margin-top: 3em;
+}
+
+.card .image{
+    margin-bottom: 1em;
+}
+
+.card .image img{
+    width: 100%;
+    display: block;
+    border-radius: var(--br-radius);
+}
+
+.card h2{
+    font-size: 1.3rem;
+    margin-bottom: 0.3em;
+}
+
+.card .price-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+    margin-bottom: 0.8em;
+}
+
+.card .price-info p:nth-child(1){
+    font-size: 1.1rem;
+}
+
+.card .price-info p:nth-child(2){
+    margin-left: 1em;
+    text-decoration: line-through;
+    font-size: 0.8rem;
+}
+
+.card .price-info p:nth-child(3){
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    background-color: var(--clr-secondary);
+    color: var(--clr-white);
+    border-radius: var(--br-radius);
+    padding: 0.3em 0.8em;
+    font-size: 0.8rem;
+}
+
+.card .btn button{
+    all: unset;
+    display: inline-block;
+    border: 1px solid var(--clr-primary);
+    background-color: var(--clr-primary);
+    color: var(--clr-white);
+    padding: 0.7em 1.5em;
+    border-radius: var(--br-radius);
+    transition: var(--trans-all);
+    transition-duration: var(--trans-duration);
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.card .btn button:hover{
+    background-color: transparent;
+    color: var(--clr-primary);
+}
+
+
+/* Tablet Version */
+
+
+@media screen and (min-width: 645px){
+    .card{
+        margin: 1em;
+    }
+
+    .card+.card{
+        margin-top: 1em;
+    }
+}
+
+
+/* Desktop Version */
+
+
+@media screen and (min-width: 1200px){
+    .card{
+        width: 310px;
+    }
+}

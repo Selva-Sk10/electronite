@@ -1,0 +1,206 @@
+.home{
+    padding: 86px 0 4em;
+}
+
+.home .hero .image{
+    height: 25vh;
+    margin-bottom: 2.5em;
+}
+
+.home .hero .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.home .collection{
+    margin-bottom: 2.5em;
+}
+
+.home .collection .box{
+    position: relative;
+    box-shadow: var(--box-shadow);
+    width: 100%;
+    overflow: hidden;
+    color: var(--clr-white);
+    margin-top: 1.5em;
+}
+
+.home .collection .box::before{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #d10023cd;
+    width: 100%;
+    height: 100%;
+    transform: translateX(-50%) skewX(-40deg);
+    z-index: 1;
+}
+
+.home .collection .box .image img{
+    width: 70%;
+    display: block;
+    margin: 0 auto;
+    transition: var(--trans-all);
+    transition-duration: var(--trans-duration);
+}
+
+.home .collection .box:hover .image img{
+    transform: scale(1.1);
+}
+
+.home .collection .box .content{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 2;
+}
+
+.home .collection .box .content h3{
+    font-size: 1.2rem;
+    margin-bottom: 0.5em;
+}
+
+.home .collection .box .content a{
+    color: inherit;
+}
+
+.home .collection .box .content p{
+    display: inline-block;
+    border-bottom: 1px solid var(--clr-white);
+}
+
+.home .new-products .cards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.home .new-products .cards .card{
+    width: 48%;
+    margin: 0;
+    margin-top: 1.5em;
+}
+
+.home .new-products .cards .card h2{
+    font-size: 0.9rem;
+}
+
+.home .card .price-info p:nth-child(1){
+    font-size: 0.9rem;
+}
+
+.home .card .price-info p:nth-child(2){
+    font-size: 0.7rem;
+}
+
+.home .card .price-info p:nth-child(3){
+    font-size: 0.7rem;
+}
+
+.home .card .btn button{
+    font-size: 0.8rem;
+}
+
+
+/* Tablet Version */
+
+
+@media screen and (min-width: 450px){
+    .home .collection .box .content h3{
+        font-size: 1.5rem;
+    }
+    .home .collection .box .content p{
+        font-size: 1.2rem;
+    }
+}
+
+
+@media screen and (min-width: 645px){
+    .home .hero .image{
+        height: auto;
+    }
+
+    .home .hero .image img{
+        height: auto;
+        object-fit: auto;
+    }
+
+    .home .wrapper > h2{
+        font-size: 1.6rem;
+    }
+
+    .home .collection{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .home .collection .box{
+        width: 48%;
+    }
+
+    .home .collection .box:last-child{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .home .collection .box .content h3{
+        font-size: 1.3rem;
+    }
+    .home .collection .box .content p{
+        font-size: 1.1rem;
+    }
+
+    .home .new-products > h2{
+        font-size: 1.6rem;
+    }
+
+    .home .new-products .cards .card h2{
+        font-size: 1.2rem;
+    }
+    
+    .home .card .price-info p:nth-child(1){
+        font-size: 1.1rem;
+    }
+    
+    .home .card .price-info p:nth-child(2){
+        font-size: 0.9rem;
+    }
+    
+    .home .card .price-info p:nth-child(3){
+        font-size: 0.9rem;
+    }
+    
+    .home .card .btn button{
+        font-size: 0.8rem;
+    }
+}
+
+
+/* Desktop Version */
+
+
+@media screen and (min-width: 1200px){
+    .home .collection .box{
+        width: 32%;
+    }
+
+    .home .collection .box:last-child{
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .home .new-products .cards .card{
+        width: 23%;
+        margin: 0;
+        margin-top: 1.5em;
+    }
+}

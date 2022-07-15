@@ -1,0 +1,205 @@
+/* Mobile Version */
+
+
+nav .desktop{
+    display: none;
+}
+
+nav{
+    background-color: var(--clr-primary);
+    color: var(--clr-white);
+    border-bottom: 3px solid var(--clr-secondary);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 15;
+}
+
+nav .flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2em 0;
+}
+
+nav .flex .logo a{
+    color: inherit;
+}
+
+nav .flex .logo h1{
+    font-size: 1.3rem;
+}
+
+nav .flex .logo h1 span{
+    color: var(--clr-secondary);
+    font-size: 2rem;
+}
+
+nav .flex .icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+nav .flex .icons .cart-icon a{
+    color: inherit;
+    /* background-color: red; */
+    display: block;
+    padding: 0.8em;
+}
+
+nav .flex .icons .hamburger{
+    margin-left: 1em;
+    padding: 0.8em;
+    position: relative;
+    z-index: 10;
+    /* background-color: red; */
+}
+
+nav .flex .icons .hamburger p{
+    width: 20px;
+    height: 2px;
+    border-radius: 5px;
+    background-color: var(--clr-white);
+    transition: var(--trans-all);
+    transition-duration: var(--trans-duration);
+}
+
+nav .flex .icons .hamburger p+p{
+    margin-top: 4px;
+}
+
+nav .flex .icons .hamburger.active p:nth-child(2){
+    display: none;
+}
+
+nav .flex .icons .hamburger.active p:nth-child(1){
+    transform: translateY(3px) rotate(40deg);
+}
+
+nav .flex .icons .hamburger.active p:nth-child(3){
+    transform: translateY(-3px) rotate(-40deg);
+}
+
+nav .flex .mobile{
+    background-color: var(--clr-blue);
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    text-align: right;
+    padding: 7em 0.8em;
+    z-index: 5;
+    transition: var(--trans-all);
+    transition-duration: var(--trans-duration);
+    transition-delay: 200ms;
+}
+
+nav .flex .mobile.active{
+    right: 0;
+    transition-delay: 0s;
+}
+
+nav .flex .mobile li+li{
+    margin-top: 2em;
+}
+
+nav .flex ul li a{
+    display: block;
+    color: inherit;
+    position: relative;
+    font-size: 0.9rem;
+}
+
+nav .flex .mobile li a{
+    padding-top: 0.8em;
+}
+
+nav .flex ul li a::after{
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--clr-secondary);
+    transition: var(--trans-all);
+    transition-duration: var(--trans-duration);
+}
+
+nav .flex ul li a:hover::after{
+    width: 100%;
+}
+
+nav .flex ul li a.active{
+    color: var(--clr-secondary);
+}
+
+nav .flex ul li a.active::after{
+    width: 100%;
+}
+
+
+/* Tablet Version */
+
+
+@media screen and (min-width: 500px){
+    nav .flex .logo h1{
+        font-size: 1.5rem;
+    }
+    
+    nav .flex .logo h1 span{
+        font-size: 2.3rem;
+    }
+}
+
+
+/* Desktop Version */
+
+
+@media screen and (min-width: 1200px){
+    nav .mobile{
+        display: none;
+    }
+
+    nav .flex .icons .hamburger{
+        display: none;
+    }
+
+    nav .logo{
+        order: 1;
+    }
+
+    nav .desktop{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        order: 2;
+    }
+
+    nav .icons{
+        order: 3;
+    }
+
+    nav .flex .desktop li+li{
+        margin-left: 2em;
+    }
+    
+    nav .flex ul li a.active{
+        color: var(--clr-secondary);
+    }
+    
+    nav .flex ul li a::after{
+        left: 0;
+    }
+
+    nav .flex .desktop li a{
+        padding: 0.3em 0;
+    }
+}

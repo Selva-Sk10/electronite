@@ -1,0 +1,49 @@
+.smartphones{
+    padding: 86px 0 4em;
+}
+
+.smartphones .header{
+    background-color: var(--clr-blue);
+    color: var(--clr-white);
+    padding: 2em 0;
+    text-align: center;
+    margin-bottom: 4em;
+}
+
+.smartphones .header h1{
+    font-size: 1.8rem;
+}
+
+.smartphones .cards{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+
+/* Tablet Version */
+
+
+@media screen and (min-width: 645px){
+    .smartphones .header h1{
+        font-size: 2rem;
+    }
+
+    .smartphones .cards{
+        justify-content: space-evenly;
+    }
+}
+
+
+/* Desktop Version */
+
+
+@media screen and (min-width: 1200px){
+    .smartphones .header h1{
+        font-size: 2.5rem;
+    }
+
+    .smartphones .cards{
+        justify-content: space-between;
+    }
+}
