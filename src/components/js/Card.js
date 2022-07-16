@@ -1,12 +1,12 @@
 import "../css/Card.css";
 
 export default function Card(props) {
-    const {title,image,price,strikedPrice,offer,category,item,addToCart} = props;
+    const {title,image,price,strikedPrice,offer,item,addToCart} = props;
 
     return (
         <div className="card">
             <div className="image">
-                <img src={`./img/${category}/${image}`}></img>
+                <img src={image}></img>
             </div>
             <div className="content">
                 <h2>{title}</h2>

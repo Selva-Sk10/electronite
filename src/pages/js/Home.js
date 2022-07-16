@@ -47,7 +47,7 @@ export default function Home(props) {
                 <div className="collection">
                     <div className="box">
                         <div className="image">
-                            <img src="./img/laptops/img-5.jpg"></img>
+                            <img src="../img/laptops/img-5.jpg"></img>
                         </div>
                         <div className="content">
                             <h3>Laptops<br></br>Collection</h3>
@@ -56,7 +56,7 @@ export default function Home(props) {
                     </div>
                     <div className="box">
                         <div className="image">
-                            <img src="./img/smartphones/img-6.jpg"></img>
+                            <img src="../img/smartphones/img-6.jpg"></img>
                         </div>
                         <div className="content">
                             <h3>Smartphones<br></br>Collection</h3>
@@ -65,7 +65,7 @@ export default function Home(props) {
                     </div>
                     <div className="box">
                         <div className="image">
-                            <img src="./img/cameras/img-3.jpg"></img>
+                            <img src="../img/cameras/img-3.jpg"></img>
                         </div>
                         <div className="content">
                             <h3>Cameras<br></br>Collection</h3>
