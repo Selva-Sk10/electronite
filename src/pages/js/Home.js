@@ -1,6 +1,6 @@
 import "../css/Home.css";
 import {Link} from "react-router-dom";
-import camera from "../img/camera.webp";
+import camera from "../img/hero/camera.webp";
 import Card from "../../components/js/Card";
 
 export default function Home(props) {
