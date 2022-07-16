@@ -6,7 +6,7 @@ export default function Cart(props) {
     const cartItem = cart.map(item => (
         <div className="cart-card" key={`${item.category}-${item.id}`}>
             <div className="image">
-                <img src={`./img/${item.category}/${item.image}`}></img>
+                <img src={item.image}></img>
             </div>
             <div className="content">
                 <h2>{item.title}</h2>
