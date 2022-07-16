@@ -42,7 +42,7 @@ function App() {
         </header>
         <main>
           <Routes>
-            <Route path="/" element={<Home addToCart={addToCart} data={data}/>}></Route>
+            <Route path="/electronite" element={<Home addToCart={addToCart} data={data}/>}></Route>
             <Route path="/laptops" element={<Laptops addToCart={addToCart} data={data}/>}></Route>
             <Route path="/smartphones" element={<Smartphones addToCart={addToCart} data={data}/>}></Route>
             <Route path="/cameras" element={<Cameras addToCart={addToCart} data={data}/>}></Route>

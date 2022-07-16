@@ -16,7 +16,7 @@ export default function Navbar(){
             <div className="wrapper">
                 <div className="flex">
                     <div className="logo">
-                        <Link to="/"><h1>Electronite<span>.</span></h1></Link>
+                        <Link to="/electronite"><h1>Electronite<span>.</span></h1></Link>
                     </div>
                     <div className="icons">
                         <div className="cart-icon">
@@ -29,13 +29,13 @@ export default function Navbar(){
                         </div>
                     </div>
                     <ul className={menu ? "mobile active" : "mobile"} onClick={showMenu}>
-                        <li><NavLink to="/">Home</NavLink></li>
+                        <li><NavLink to="/electronite">Home</NavLink></li>
                         <li><NavLink to="/laptops">Laptops</NavLink></li>
                         <li><NavLink to="/smartphones">Smartphones</NavLink></li>
                         <li><NavLink to="/cameras">Cameras</NavLink></li>
                     </ul>
                     <ul className="desktop">
-                        <li><NavLink to="/">Home</NavLink></li>
+                        <li><NavLink to="/electronite">Home</NavLink></li>
                         <li><NavLink to="/laptops">Laptops</NavLink></li>
                         <li><NavLink to="/smartphones">Smartphones</NavLink></li>
                         <li><NavLink to="/cameras">Cameras</NavLink></li>
