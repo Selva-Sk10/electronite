@@ -1,16 +1,22 @@
 {
   "files": {
     "main.css": "/electronite/static/css/main.cdf7ec4a.css",
-    "main.js": "/electronite/static/js/main.363b9cad.js",
+    "main.js": "/electronite/static/js/main.d06b969f.js",
     "static/js/787.46493d11.chunk.js": "/electronite/static/js/787.46493d11.chunk.js",
+    "static/media/img-5.jpg": "/electronite/static/media/img-5.8326cf804d6707b9b067.jpg",
+    "static/media/img-2.jpg": "/electronite/static/media/img-2.f170a1f62e3721b25d10.jpg",
+    "static/media/img-3.jpg": "/electronite/static/media/img-3.3ff45ed0dd746cc7037d.jpg",
+    "static/media/img-1.jpg": "/electronite/static/media/img-1.d88e22aa67e8a5c089cd.jpg",
+    "static/media/img-4.jpg": "/electronite/static/media/img-4.0c5edba75f6b282549a2.jpg",
     "static/media/camera.webp": "/electronite/static/media/camera.ebf31d708ee0662c33cf.webp",
+    "static/media/img-6.jpg": "/electronite/static/media/img-6.03ba1c37028280f23f9c.jpg",
     "index.html": "/electronite/index.html",
     "main.cdf7ec4a.css.map": "/electronite/static/css/main.cdf7ec4a.css.map",
-    "main.363b9cad.js.map": "/electronite/static/js/main.363b9cad.js.map",
+    "main.d06b969f.js.map": "/electronite/static/js/main.d06b969f.js.map",
     "787.46493d11.chunk.js.map": "/electronite/static/js/787.46493d11.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cdf7ec4a.css",
-    "static/js/main.363b9cad.js"
+    "static/js/main.d06b969f.js"
   ]
 }
