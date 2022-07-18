@@ -2,8 +2,14 @@ import "../css/Navbar.css";
 import {Link, NavLink} from "react-router-dom";
 import { useState } from "react";
 
-export default function Navbar(){
+export default function Navbar(props){
+    const {count} = props
     const [menu, setMenu] = useState(false);
+
+    let showCount = true;
+    if(count === 0){
+        showCount = false;
+    }
 
     function showMenu(e){
         if(!e.target.matches("ul")){
@@ -21,6 +27,7 @@ export default function Navbar(){
                     <div className="icons">
                         <div className="cart-icon">
                             <Link to="/cart"><i className="fa-solid fa-cart-shopping"></i></Link>
+                            {showCount && <Link to="/cart" className="count">{count}</Link>}
                         </div>
                         <div className={menu ? "hamburger active" : "hamburger"} onClick={showMenu}>
                             <p></p>

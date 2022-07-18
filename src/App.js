@@ -1,5 +1,5 @@
 import './App.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import data from "./data/data";
 import Navbar from "./components/js/Navbar";
@@ -12,6 +12,16 @@ import Cart from "./pages/js/Cart";
 
 function App() {
   const [cart, setCart] = useState([]);
+  const [count, setCount] = useState(0);
+
+  useEffect(() =>{
+    let num = 0;
+    cart.forEach(item =>{
+      num += item.qty;
+    });
+
+    setCount(num);
+  });
 
   function addToCart(item){
     let isNew = true;
@@ -22,7 +32,7 @@ function App() {
     });
 
     if(isNew){
-      setCart([...cart,item]);
+      setCart([...cart,{...item,qty: 1}]);
     }
   }
 
@@ -30,7 +40,6 @@ function App() {
     const cartUpdated = cart.filter(elem =>{
       return elem.id !== item.id
     });
-    console.log(cartUpdated);
     setCart(cartUpdated);
   }
 
@@ -38,7 +47,7 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <header>
-          <Navbar/>
+          <Navbar cart={cart} count={count}/>
         </header>
         <main>
           <Routes>
@@ -46,7 +55,7 @@ function App() {
             <Route path="/laptops" element={<Laptops addToCart={addToCart} data={data}/>}></Route>
             <Route path="/smartphones" element={<Smartphones addToCart={addToCart} data={data}/>}></Route>
             <Route path="/cameras" element={<Cameras addToCart={addToCart} data={data}/>}></Route>
-            <Route path="/cart" element={<Cart cart={cart} removeFromCart={removeFromCart}/>}></Route>
+            <Route path="/cart" element={<Cart cart={cart} setCart={setCart} removeFromCart={removeFromCart} count={count}/>}></Route>
           </Routes>
         </main>
         <Footer/>

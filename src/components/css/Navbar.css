@@ -44,11 +44,27 @@ nav .flex .icons{
     align-items: center;
 }
 
+nav .flex .icons .cart-icon{
+    position: relative;
+}
+
 nav .flex .icons .cart-icon a{
     color: inherit;
     /* background-color: red; */
     display: block;
     padding: 0.8em;
+}
+
+nav .flex .icons .cart-icon .count{
+    display: inline-block;
+    position: absolute;
+    top: 3px;
+    left: 20px;
+    background-color: var(--clr-secondary);
+    padding: 0.3em 0.8em;
+    border-radius: var(--br-radius);
+    font-size: 0.6rem;
+    font-weight: 600;
 }
 
 nav .flex .icons .hamburger{
